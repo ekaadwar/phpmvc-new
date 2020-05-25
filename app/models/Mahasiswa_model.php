@@ -1,6 +1,6 @@
 <?php 
 
-class User_model
+class Mahasiswa_model
 {
 	private $table = 'mahasiswa', 
 			$db;
@@ -10,7 +10,7 @@ class User_model
 		$this->db = new Database;
 	}
 
-	public function getUser(){
+	public function getData(){
 		$query = "SELECT * FROM " . $this->table;
 		$this->db->query($query);
 		return $this->db->allResult();

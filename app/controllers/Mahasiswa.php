@@ -5,9 +5,10 @@ class Mahasiswa extends Controller
 	public function index()
 	{
 		$data['title'] = 'Daftar Mahasiswa';
+		$data['mahasiswa'] = $this->model('Mahasiswa_model')->getData();
 
 		$this->view('templates/header', $data);
-		$this->view('mahasiswa/index');
+		$this->view('mahasiswa/index', $data);
 		$this->view('templates/footer');
 	}
 }

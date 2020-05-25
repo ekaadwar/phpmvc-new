@@ -6,10 +6,10 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<ul>
-				<?php foreach ($variable as $key => $value): ?>
-					
-				<?php endforeach ?>
+			<ul class="list-group">
+				<?php foreach ($data['mahasiswa'] as $mahasiswa): ?>
+					<li class="list-group-item"><?= $mahasiswa['nama']; ?></li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 	</div>
