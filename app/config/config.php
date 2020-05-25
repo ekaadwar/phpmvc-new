@@ -5,4 +5,4 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'phpmvc');
 
-define('BASIC_URL', 'http://localhost/phpmvc/public');
+define('BASE_URL', 'http://localhost/phpmvc/public');
