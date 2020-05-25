@@ -15,4 +15,11 @@ class Mahasiswa_model
 		$this->db->query($query);
 		return $this->db->allResult();
 	}
+
+	public function getDataById($id){
+		$query = "SELECT * FROM " . $this->table . " WHERE id=:id";
+		$this->db->query($query);
+		$this->db->bind('id', $id);
+		return $this->db->singleRes();
+	}
 }
