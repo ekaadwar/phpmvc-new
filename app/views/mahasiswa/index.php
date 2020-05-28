@@ -14,6 +14,11 @@
 	</div>
 	<div class="row mt-3">
 		<div class="col-md-6">
+			<?php Flasher::flash(); ?>
+		</div>
+	</div>
+	<div class="row mt-3">
+		<div class="col-md-6">
 			<ul class="list-group">
 				<?php foreach ($data['mahasiswa'] as $mahasiswa): ?>
 					<li class="list-group-item">
