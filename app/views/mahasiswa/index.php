@@ -7,7 +7,7 @@
 	<div class="row mt-3">
 		<div class="col-md-6">
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputData">
+			<button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#inputData">
 			  Tambah Data Mahasiswa
 			</button>
 		</div>
@@ -25,7 +25,7 @@
 						<?= $mahasiswa['nama']; ?>
 						<a href="<?= BASE_URL; ?>/mahasiswa/detail/<?= $mahasiswa['id']; ?>" class="badge badge-primary float-right ml-1">Detail</a>
 						<a href="<?= BASE_URL; ?>/mahasiswa/hapus/<?= $mahasiswa['id']; ?>" class="badge badge-danger float-right ml-1" onclick='return confirm("Yakin?")'>Hapus</a>
-						<a href="<?= BASE_URL; ?>/mahasiswa/edit/<?= $mahasiswa['id']; ?>" class="badge badge-success float-right ml-1" data-toggle="modal" data-target="#inputData">Edit</a>
+						<a href="<?= BASE_URL; ?>/mahasiswa/ubah/<?= $mahasiswa['id']; ?>" class="badge badge-success float-right ml-1 tombolUbahData" data-toggle="modal" data-target="#inputData" data-id="<?= $mahasiswa['id']; ?>">Ubah</a>
 					</li>
 				<?php endforeach; ?>
 			</ul>
@@ -45,6 +45,7 @@
       </div>
       <div class="modal-body">
         <form method="post" action="<?= BASE_URL; ?>/mahasiswa/tambah">
+        	<input type="hidden" name="id" id="id">
         	<div class="form-group">
 				    <label for="name">Nama</label>
 				    <input type="text" class="form-control" id="name" name="nama">
