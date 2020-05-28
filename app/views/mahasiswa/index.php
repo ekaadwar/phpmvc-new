@@ -23,7 +23,9 @@
 				<?php foreach ($data['mahasiswa'] as $mahasiswa): ?>
 					<li class="list-group-item">
 						<?= $mahasiswa['nama']; ?>
-						<a href="<?= BASE_URL; ?>/mahasiswa/detail/<?= $mahasiswa['id']; ?>" class="badge badge-primary float-right">Detail</a>
+						<a href="<?= BASE_URL; ?>/mahasiswa/detail/<?= $mahasiswa['id']; ?>" class="badge badge-primary float-right ml-1">Detail</a>
+						<a href="<?= BASE_URL; ?>/mahasiswa/hapus/<?= $mahasiswa['id']; ?>" class="badge badge-danger float-right ml-1" onclick='return confirm("Yakin?")'>Hapus</a>
+						<a href="<?= BASE_URL; ?>/mahasiswa/edit/<?= $mahasiswa['id']; ?>" class="badge badge-success float-right ml-1" data-toggle="modal" data-target="#inputData">Edit</a>
 					</li>
 				<?php endforeach; ?>
 			</ul>
